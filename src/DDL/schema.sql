@@ -82,3 +82,18 @@ CREATE TABLE socio_plan_entrenamiento (
         REFERENCES sedes(sede_id)
 
 ) ENGINE=InnoDB;
+
+/*
+========================================================
+            CREACION DE INDICES
+========================================================
+*/
+
+CREATE INDEX indx_nombres_socios
+ON socios(nombres, apellidos);
+
+CREATE INDEX indx_nombre_entrenador
+ON entrenadores(nombre_entrenador);
+
+CREATE INDEX indx_planes_entrenamiento
+ON planes_entrenamiento(plan_entrenamiento);
